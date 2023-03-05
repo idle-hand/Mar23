@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+</head>
+<body>
+   <h1 style="color: blue;" class="abc" id="xyz">Document Object</h1>
+   <h2 id="abc">DOM Methods</h2>
+   <button type="button" onclick="get()">Get Attribute</button>
+   <button type="button" onclick="set()">Set Attribute</button>
+   <button type="button" onclick="remove()">Remove Attribute</button>
+   <button type="button" onclick="getAttrNode(this)" class="btn">Get Attribute Node</button>
+   <script>
+      let a=document.getElementById('xyz');
+      let b=document.getElementById('abc');
+ 
+      function get()
+      {
+        console.log('id:',a.getAttribute('id'));
+        console.log('style:',a.getAttribute('style'));
+        console.log('class:',a.getAttribute('class'));
+      }
+    function set()
+    {
+      b.setAttribute('class','pqr');
+      b.setAttribute('style','color:red; padding:1rem;');
+      console.log('style:',b.getAttribute('style'));
+      console.log('class:',b.getAttribute('class'));
+    }
+    function remove()
+    {
+      b.removeAttribute('class');
+      b.removeAttribute('style');
+      console.log('style:',b.getAttribute('style'));
+      console.log('class:',b.getAttribute('class'));
+    }
+    function getAttrNode(event)
+    {
+      console.log('type:',event.getAttribute('type'));
+      console.log('class:',event.getAttribute('class'));
+      console.log('onclick:',event.getAttribute('onclick'));
+    }
+</script>
+</body>
+</html>
+What are DOM styling methods?

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+</head>
+<body>
+  <h1>JS Tutorials</h1>
+  <h2 id="abc">Document Object Model</h2>
+  <p class="xyz">DOM properties</p>
+  <p class="pqr">DOM method</p>
+  <input type='text' id="user"/><br/>
+  <button type="button" onclick="fun()">Submit</button>
+  <script>
+    function fun()
+    {
+      // getting the value from the input field.
+      let val=document.getElementById('user').value;
+      let h2=document.getElementById('abc');
+ 
+      // getting and updating the innertext of h2 element.
+      console.log(h2.innerText);
+      h2.innerText='Welcome,'+val;
+ 
+      // difference between innerHTML and innerText
+      console.log(document.body.innerHTML);
+      console.log(document.body.innerText);
+ 
+      let para=document.getElementsByClassName('xyz')[0];
+      para.innerHTML="<h2>DOM PROPERTIES</h2>";
+ 
+      let para2=document.getElementsByClassName('pqr')[0];
+      para2.innerText="<h2>DOM METHOD</h2>";
+   }
+</script>
+</body>
+</html>
